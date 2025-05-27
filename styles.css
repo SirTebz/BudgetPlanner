@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #F1F0E9 0%, #41644A 100%);
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(241, 240, 233, 0.95);
+    border-radius: 15px; 
+    padding: 20px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+h1 {
+    color: #0D4715;
+    font-weight: 600;
+    font-size: 24px; 
+}
+
+.total-budget {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.total-budget input {
+    padding: 6px 10px; 
+    border: 2px solid #41644A;
+    border-radius: 6px; 
+    font-size: 14px; 
+    width: 100px; 
+    background: #F1F0E9;
+}
+
+.budget-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+}
+
+.sliders-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.category {
+    background: #fff;
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.2s;
+}
+
+.category:hover {
+    transform: translateY(-3px); 
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; 
+    color: #41644A;
+    font-weight: 500;
+    font-size: 14px; 
+}
+
+.amount {
+    color: #E9762B;
+}
+
+.slider {
+    width: 100%;
+    height: 6px; 
+    border-radius: 3px; 
+    background: #F1F0E9;
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px; 
+    height: 16px; 
+    border-radius: 50%;
+    background: #0D4715;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.percentage {
+    text-align: right;
+    color: #41644A;
+    margin-top: 5px; 
+    font-size: 12px; 
+}
+
+.visuals-section {
+    padding: 15px; 
+}
+
+canvas {
+    max-height: 300px; 
+}
+
+.summary {
+    margin-top: 15px; 
+    padding: 10px; 
+    background: #F1F0E9;
+    border-radius: 8px; 
+}
+
+.summary h3 {
+    color: #0D4715;
+    margin-bottom: 8px; 
+    font-size: 16px; 
+}
+
+.warning {
+    margin-top: 8px; 
+    padding: 6px; 
+    background: #E9762B;
+    color: #fff;
+    border-radius: 4px; 
+    text-align: center;
+    font-size: 12px; 
+}
+
+.hidden {
+    display: none;
+}

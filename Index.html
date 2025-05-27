@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Budget Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Budget Planner</h1>
+            <div class="total-budget">
+                <label>Total Monthly Budget: R</label>
+                <input type="number" id="totalBudget" value="5000" min="0">
+            </div>
+        </header>
+
+        <div class="budget-grid">
+            <div class="sliders-section">
+                <div class="category" data-category="housing">
+                    <div class="category-header">
+                        <span>Housing</span>
+                        <span class="amount">R<span class="value">1500</span></span>
+                    </div>
+                    <input type="range" min="0" max="100" value="30" class="slider">
+                    <div class="percentage"><span>30</span>%</div>
+                </div>
+
+                <div class="category" data-category="food">
+                    <div class="category-header">
+                        <span>Food</span>
+                        <span class="amount">R<span class="value">750</span></span>
+                    </div>
+                    <input type="range" min="0" max="100" value="15" class="slider">
+                    <div class="percentage"><span>15</span>%</div>
+                </div>
+
+                <div class="category" data-category="transport">
+                    <div class="category-header">
+                        <span>Transport</span>
+                        <span class="amount">R<span class="value">500</span></span>
+                    </div>
+                    <input type="range" min="0" max="100" value="10" class="slider">
+                    <div class="percentage"><span>10</span>%</div>
+                </div>
+
+                <div class="category" data-category="entertainment">
+                    <div class="category-header">
+                        <span>Entertainment</span>
+                        <span class="amount">R<span class="value">250</span></span>
+                    </div>
+                    <input type="range" min="0" max="100" value="5" class="slider">
+                    <div class="percentage"><span>5</span>%</div>
+                </div>
+
+                <div class="category" data-category="savings">
+                    <div class="category-header">
+                        <span>Savings</span>
+                        <span class="amount">R<span class="value">1500</span></span>
+                    </div>
+                    <input type="range" min="0" max="100" value="30" class="slider">
+                    <div class="percentage"><span>30</span>%</div>
+                </div>
+            </div>
+
+            <div class="visuals-section">
+                <canvas id="budgetChart"></canvas>
+                <div class="summary">
+                    <h3>Budget Summary</h3>
+                    <p>Total Allocated: R<span id="totalAllocated">4000</span></p>
+                    <p>Remaining: R<span id="remaining">1000</span></p>
+                    <div id="warning" class="warning hidden">Budget exceeded!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
